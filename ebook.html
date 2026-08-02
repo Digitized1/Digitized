@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Guide — Clearlane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 7H14" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+        <path d="M2 11H20" stroke="#F7F4EE" stroke-width="2" stroke-linecap="round"/>
+        <path d="M2 15H10" stroke="#2E6F6E" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Clearlane
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="founders.html">Founders Circle</a></li>
+      <li><a href="ebook.html" class="active">Free Guide</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-ghost">Book a call</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding:80px 0;">
+  <div class="lanes"></div>
+  <div class="wrap grid-2" style="align-items:center;">
+    <div>
+      <span class="eyebrow hero-eyebrow">Free guide</span>
+      <h1 style="font-size:clamp(2.2rem, 4vw, 3.2rem); margin-top:16px;">The Four-Lane Audit</h1>
+      <p class="lede" style="margin-top:18px;">A short, practical worksheet for finding exactly where your business is leaking time — before you hire, and before you automate anything.</p>
+      <form class="ebook-form" style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;" onsubmit="return false;">
+        <input type="email" required placeholder="you@business.com" style="flex:1; min-width:220px; padding:14px 16px; border-radius:2px; border:1px solid rgba(247,244,238,0.3); background:transparent; color:var(--paper);">
+        <button type="submit" class="btn btn-primary" style="background:var(--gold); color:var(--ink);">Send me the guide</button>
+      </form>
+      <p style="margin-top:12px; font-size:0.82rem; color:rgba(247,244,238,0.55);">No spam. One email, then you're off the list unless you ask to stay.</p>
+    </div>
+    <div class="card" style="background:var(--paper); padding:36px;">
+      <span class="lane-tag">Inside the guide</span>
+      <ul style="margin-top:18px; padding-left:20px; color:var(--ink-soft);">
+        <li style="margin-bottom:12px;">A 10-minute audit to find your biggest time leak</li>
+        <li style="margin-bottom:12px;">The difference between a task to automate and one to delegate</li>
+        <li style="margin-bottom:12px;">A worksheet for pricing out DIY vs. outsourced support</li>
+        <li>Three real workflow maps from Clearlane clients</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why we made this</span>
+      <h2>Most founders guess at what's actually slow</h2>
+      <p class="lede" style="margin-top:14px;">Before we build anything for a client, we run this same audit. It usually surfaces a bottleneck the founder hadn't named yet — often something small and constant, rather than one big broken process.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="wrap">
+    <h2>Want a second pair of eyes on it?</h2>
+    <p class="lede">Bring your completed audit to a free strategy call and we'll walk through it together.</p>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn btn-primary" style="background:var(--gold); color:var(--ink);">Book a free strategy call</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:var(--paper); margin-bottom:14px;">Clearlane</div>
+        <p style="max-width:320px; color:rgba(247,244,238,0.65);">Operations support for founders who'd rather grow the business than run its inbox.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="founders.html">Founders Circle</a></li>
+          <li><a href="ebook.html">Free Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>hello@clearlane.co</li>
+          <li>Remote-first, worldwide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Clearlane. All rights reserved.</span>
+      <span>Privacy Policy · Terms · Cookies</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
