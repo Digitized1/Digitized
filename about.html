@@ -6,7 +6,7 @@
 <title>About — Clearlane</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -34,8 +34,9 @@
   </div>
 </nav>
 
-<header class="page-header">
-  <div class="wrap">
+<header class="page-header" style="position:relative; overflow:hidden;">
+  <div class="float-shape" style="width:180px; height:180px; top:-20%; right:6%; background:radial-gradient(circle at 30% 30%, rgba(201,162,39,0.45), transparent 70%); animation-duration:8s;"></div>
+  <div class="wrap" style="opacity:0; animation:word-in 0.6s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.1s; position:relative; z-index:2;">
     <span class="eyebrow">About Clearlane</span>
     <h1>Operations shouldn't be the hardest part of running a business.</h1>
     <p class="lede">We started Clearlane after watching too many good businesses stall — not from lack of demand, but from founders buried in admin they never meant to become experts in.</p>
@@ -59,11 +60,11 @@
 
 <section class="section-alt">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">What we believe</span>
       <h2>Three things we won't compromise on</h2>
     </div>
-    <div class="grid-3">
+    <div class="grid-3 reveal-stagger">
       <div class="card">
         <h3>Your brand, not ours</h3>
         <p>Every assistant works under your name, your tone, your policies. Clients should never notice a handoff happened.</p>
@@ -82,11 +83,11 @@
 
 <section>
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Who it's for</span>
       <h2>The founders we work best with</h2>
     </div>
-    <div class="grid-3">
+    <div class="grid-3 reveal-stagger">
       <div class="card"><h3>Aesthetic & wellness clinics</h3><p>High booking volume, low tolerance for missed follow-ups.</p></div>
       <div class="card"><h3>Coaches & consultants</h3><p>Client-facing work that shouldn't compete with inbox triage.</p></div>
       <div class="card"><h3>Service-based teams</h3><p>Growing fast enough that "we'll fix it later" stopped working.</p></div>
@@ -136,6 +137,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

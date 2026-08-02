@@ -6,7 +6,7 @@
 <title>Services — Clearlane</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -34,8 +34,9 @@
   </div>
 </nav>
 
-<header class="page-header">
-  <div class="wrap">
+<header class="page-header" style="position:relative; overflow:hidden;">
+  <div class="float-shape" style="width:180px; height:180px; top:-20%; right:6%; background:radial-gradient(circle at 30% 30%, rgba(201,162,39,0.45), transparent 70%); animation-duration:8s;"></div>
+  <div class="wrap" style="opacity:0; animation:word-in 0.6s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.1s; position:relative; z-index:2;">
     <span class="eyebrow">What we do</span>
     <h1>Two levers. Pick one, or use both.</h1>
     <p class="lede">Some businesses need a person. Some need a process fixed. Most need a bit of each — Clearlane is built to flex either way.</p>
@@ -71,11 +72,11 @@
 
 <section class="section-alt">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Engagement path</span>
       <h2>How a lane gets built</h2>
     </div>
-    <div class="lane-steps">
+    <div class="lane-steps reveal-stagger">
       <div class="lane-step">
         <span class="lane-tag">Week 0</span>
         <h3>Map</h3>
@@ -102,7 +103,7 @@
 
 <section>
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Works with your stack</span>
       <h2>No rip-and-replace required</h2>
       <p class="lede" style="margin-top:14px;">Clearlane connects to the tools you already use — we build on top of your existing CRM, helpdesk, or booking software rather than asking you to switch.</p>
@@ -160,6 +161,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

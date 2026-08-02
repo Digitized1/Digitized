@@ -6,7 +6,7 @@
 <title>Free Guide — Clearlane</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -34,18 +34,19 @@
   </div>
 </nav>
 
-<header class="hero" style="padding:80px 0;">
+<header class="hero" style="padding:80px 0; position:relative; overflow:hidden;">
   <div class="lanes"></div>
-  <div class="wrap grid-2" style="align-items:center;">
+  <div class="float-shape" style="width:200px; height:200px; top:-10%; right:4%; background:radial-gradient(circle at 30% 30%, rgba(201,162,39,0.5), transparent 70%); animation-duration:8.5s;"></div>
+  <div class="wrap grid-2" style="align-items:center; opacity:0; animation:word-in 0.7s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.1s; position:relative; z-index:2;">
     <div>
       <span class="eyebrow hero-eyebrow">Free guide</span>
       <h1 style="font-size:clamp(2.2rem, 4vw, 3.2rem); margin-top:16px;">The Four-Lane Audit</h1>
       <p class="lede" style="margin-top:18px;">A short, practical worksheet for finding exactly where your business is leaking time — before you hire, and before you automate anything.</p>
-      <form class="ebook-form" style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;" onsubmit="return false;">
-        <input type="email" required placeholder="you@business.com" style="flex:1; min-width:220px; padding:14px 16px; border-radius:2px; border:1px solid rgba(247,244,238,0.3); background:transparent; color:var(--paper);">
+      <form id="ebook-form" style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+        <input id="ebook-email" type="email" required placeholder="you@business.com" style="flex:1; min-width:220px; padding:14px 16px; border-radius:2px; border:1px solid rgba(247,244,238,0.3); background:transparent; color:var(--paper);">
         <button type="submit" class="btn btn-primary" style="background:var(--gold); color:var(--ink);">Send me the guide</button>
       </form>
-      <p style="margin-top:12px; font-size:0.82rem; color:rgba(247,244,238,0.55);">No spam. One email, then you're off the list unless you ask to stay.</p>
+      <p id="ebook-note" style="margin-top:12px; font-size:0.82rem; color:rgba(247,244,238,0.55);">No spam. One email, then you're off the list unless you ask to stay.</p>
     </div>
     <div class="card" style="background:var(--paper); padding:36px;">
       <span class="lane-tag">Inside the guide</span>
@@ -61,7 +62,7 @@
 
 <section>
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Why we made this</span>
       <h2>Most founders guess at what's actually slow</h2>
       <p class="lede" style="margin-top:14px;">Before we build anything for a client, we run this same audit. It usually surfaces a bottleneck the founder hadn't named yet — often something small and constant, rather than one big broken process.</p>
@@ -111,6 +112,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

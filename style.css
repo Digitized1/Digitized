@@ -355,4 +355,203 @@ footer {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--ink-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.pill:hover { transform: translateY(-2px); border-color: var(--gold); }
+
+/* ============================================================
+   Premium motion layer
+   ============================================================ */
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-stagger.in-view > * { animation: none; }
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.02s; }
+.reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.10s; }
+.reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.18s; }
+.reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.26s; }
+.reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+
+/* Nav: glass + scrolled state */
+.site-nav {
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+.site-nav.scrolled {
+  background: rgba(20, 33, 61, 0.86);
+  backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+.brand-mark { transition: transform 0.4s ease; }
+.brand:hover .brand-mark { transform: rotate(-8deg) scale(1.08); }
+
+/* Animated gradient mesh behind hero (replaces flat ink bg) */
+.hero, .page-header {
+  background: var(--ink);
+  background-image:
+    radial-gradient(600px 400px at 12% -10%, rgba(201,162,39,0.22), transparent 60%),
+    radial-gradient(700px 500px at 92% 10%, rgba(46,111,110,0.30), transparent 60%),
+    radial-gradient(500px 400px at 50% 120%, rgba(201,162,39,0.10), transparent 60%);
+  background-size: 160% 160%, 160% 160%, 160% 160%;
+  animation: mesh-drift 18s ease-in-out infinite alternate;
+}
+@keyframes mesh-drift {
+  0% { background-position: 0% 0%, 100% 0%, 50% 100%; }
+  100% { background-position: 10% 15%, 88% 12%, 45% 88%; }
+}
+
+/* Floating accent shapes */
+.float-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.5;
+  animation: float-y 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-16px) translateX(6px); }
+}
+
+/* Hero headline: word-by-word entrance */
+.hero h1 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: word-in 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+@keyframes word-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons: shine sweep on hover */
+.btn-primary, .btn-outline {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-primary:hover::after { left: 130%; }
+
+.btn.is-loading { pointer-events: none; opacity: 0.75; }
+.btn .spin {
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Cards: lift + glow on hover */
+.card {
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(20,33,61,0.10);
+  border-color: var(--gold);
+}
+.testi { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.testi:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(20,33,61,0.08); }
+
+/* Stat count-up target styling */
+.stat .num { font-variant-numeric: tabular-nums; }
+
+/* Marquee (trusted-by / logo strip style motion) */
+.marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Lane dash: brighter premium trail with glow */
+.lane-dash {
+  box-shadow: 0 0 12px 1px rgba(201,162,39,0.7);
+}
+
+/* Toast / inline success message */
+.form-toast {
+  display: none;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: rgba(46,111,110,0.10);
+  border: 1px solid var(--teal);
+  color: var(--ink);
+  margin-top: 18px;
+  animation: toast-in 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.form-toast.show { display: flex; }
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.form-toast .dot {
+  width: 22px; height: 22px; flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+}
+
+/* Input focus polish */
+input, textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--teal) !important;
+  box-shadow: 0 0 0 3px rgba(46,111,110,0.15);
+}
+
+/* Nav link underline sweep */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stagger > *, .hero h1 span { opacity: 1 !important; transform: none !important; }
+  .hero, .page-header, .marquee-track, .lane-dash, .float-shape { animation: none !important; }
 }

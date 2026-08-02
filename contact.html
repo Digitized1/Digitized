@@ -6,7 +6,7 @@
 <title>Book a Call — Clearlane</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -34,8 +34,9 @@
   </div>
 </nav>
 
-<header class="page-header">
-  <div class="wrap">
+<header class="page-header" style="position:relative; overflow:hidden;">
+  <div class="float-shape" style="width:180px; height:180px; top:-20%; right:6%; background:radial-gradient(circle at 30% 30%, rgba(201,162,39,0.45), transparent 70%); animation-duration:8s;"></div>
+  <div class="wrap" style="opacity:0; animation:word-in 0.6s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.1s; position:relative; z-index:2;">
     <span class="eyebrow">Book a call</span>
     <h1>Let's map your first lane.</h1>
     <p class="lede">20 minutes, no pitch deck. Tell us where your time is going and we'll tell you honestly whether Clearlane can help.</p>
@@ -44,22 +45,31 @@
 
 <section>
   <div class="wrap grid-2">
-    <form onsubmit="return false;" style="display:flex; flex-direction:column; gap:18px;">
-      <div>
-        <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Name</label>
-        <input type="text" required style="width:100%; padding:14px; border:1px solid var(--line-strong); border-radius:2px; background:var(--paper); font-family:inherit;">
-      </div>
-      <div>
-        <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Business email</label>
-        <input type="email" required style="width:100%; padding:14px; border:1px solid var(--line-strong); border-radius:2px; background:var(--paper); font-family:inherit;">
-      </div>
-      <div>
-        <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">What's eating the most time right now?</label>
-        <textarea rows="4" style="width:100%; padding:14px; border:1px solid var(--line-strong); border-radius:2px; background:var(--paper); font-family:inherit;"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Request a call</button>
-    </form>
-    <div class="card">
+    <div class="reveal">
+      <form id="contact-form" style="display:flex; flex-direction:column; gap:18px;">
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Name</label>
+          <input id="cf-name" type="text" required style="width:100%; padding:14px; border:1px solid var(--line-strong); border-radius:2px; background:var(--paper); font-family:inherit;">
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Business email</label>
+          <input id="cf-email" type="email" required style="width:100%; padding:14px; border:1px solid var(--line-strong); border-radius:2px; background:var(--paper); font-family:inherit;">
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">What's eating the most time right now?</label>
+          <textarea id="cf-note" rows="4" style="width:100%; padding:14px; border:1px solid var(--line-strong); border-radius:2px; background:var(--paper); font-family:inherit;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Request a call</button>
+        <div id="form-toast" class="form-toast">
+          <span class="dot">✓</span>
+          <div>
+            <strong>Request sent.</strong><br>
+            <span style="font-size:0.9rem; color:var(--ink-soft);">Your email app should open with the details pre-filled — hit send there and we'll reply within one business day.</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card reveal">
       <span class="lane-tag">What to expect</span>
       <ul style="margin-top:18px; padding-left:20px; color:var(--ink-soft);">
         <li style="margin-bottom:12px;">A quick walkthrough of your current process</li>
@@ -103,6 +113,6 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

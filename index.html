@@ -7,7 +7,7 @@
 <meta name="description" content="Clearlane pairs trained virtual assistants with light automation so growing businesses stop drowning in admin.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -37,11 +37,13 @@
 
 <header class="hero">
   <div class="lanes"></div>
+  <div class="float-shape" style="width:220px; height:220px; top:8%; right:8%; background:radial-gradient(circle at 30% 30%, rgba(201,162,39,0.5), transparent 70%); animation-duration:9s;"></div>
+  <div class="float-shape" style="width:140px; height:140px; bottom:12%; right:22%; background:radial-gradient(circle at 30% 30%, rgba(46,111,110,0.55), transparent 70%); animation-duration:7s; animation-delay:1s;"></div>
   <div class="wrap">
-    <span class="eyebrow hero-eyebrow">Operations & Support, Outsourced Right</span>
-    <h1>Run your business.<br>Let us run the <em>busywork</em>.</h1>
-    <p class="lede">Clearlane pairs trained virtual assistants with light automation so the follow-ups, scheduling, and admin get handled — without you hiring, training, or managing anyone new.</p>
-    <div class="hero-cta">
+    <span class="eyebrow hero-eyebrow" style="opacity:0; animation:word-in 0.6s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.05s;">Operations & Support, Outsourced Right</span>
+    <h1 data-split>Run your business. Let us run the busywork.</h1>
+    <p class="lede" style="opacity:0; animation:word-in 0.7s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.75s;">Clearlane pairs trained virtual assistants with light automation so the follow-ups, scheduling, and admin get handled — without you hiring, training, or managing anyone new.</p>
+    <div class="hero-cta" style="opacity:0; animation:word-in 0.7s cubic-bezier(0.16,1,0.3,1) forwards; animation-delay:0.9s;">
       <a href="contact.html" class="btn btn-primary">Book a free strategy call</a>
       <a href="services.html" class="btn btn-ghost">See how it works</a>
     </div>
@@ -61,12 +63,12 @@
 
 <section class="section-alt">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">The bottleneck</span>
       <h2>Growth stalls in the same three places</h2>
       <p class="lede" style="margin-top:14px;">Most founders don't lose momentum from lack of demand. They lose it here.</p>
     </div>
-    <div class="grid-3">
+    <div class="grid-3 reveal-stagger">
       <div class="card">
         <h3>Hiring takes forever</h3>
         <p>Sourcing, training, and managing new staff can eat 20+ hours a week — time that isn't going toward clients.</p>
@@ -85,12 +87,12 @@
 
 <section>
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">How Clearlane works</span>
       <h2>Four lanes. One system.</h2>
       <p class="lede" style="margin-top:14px;">We built Clearlane around the actual path work takes through a small business — so nothing gets dropped between "new lead" and "happy client."</p>
     </div>
-    <div class="lane-steps">
+    <div class="lane-steps reveal-stagger">
       <div class="lane-step">
         <span class="lane-tag">Lane 01</span>
         <h3>Intake</h3>
@@ -117,21 +119,21 @@
 
 <section class="section-ink">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow" style="color:var(--gold);">What changes</span>
       <h2 style="color:var(--paper);">The result, in numbers our clients actually track</h2>
     </div>
-    <div class="stat-row">
+    <div class="stat-row reveal-stagger">
       <div class="stat">
-        <div class="num">40%</div>
+        <div class="num" data-count="40" data-suffix="%">0%</div>
         <div class="label">average reduction in support & admin costs</div>
       </div>
       <div class="stat">
-        <div class="num">20+ hrs</div>
+        <div class="num" data-count="20" data-suffix="+ hrs">0 hrs</div>
         <div class="label">reclaimed per week, per founder</div>
       </div>
       <div class="stat">
-        <div class="num">2x</div>
+        <div class="num" data-count="2" data-suffix="x">0x</div>
         <div class="label">faster response time to new leads</div>
       </div>
     </div>
@@ -140,11 +142,11 @@
 
 <section class="section-alt">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">What we do</span>
       <h2>Two ways we take work off your plate</h2>
     </div>
-    <div class="grid-2">
+    <div class="grid-2 reveal-stagger">
       <div class="card">
         <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>Workflow automation</h3>
@@ -161,11 +163,11 @@
 
 <section>
   <div class="wrap">
-    <div class="section-head" style="margin-bottom:32px;">
+    <div class="section-head reveal" style="margin-bottom:32px;">
       <span class="eyebrow">In their words</span>
       <h2>Founders who got their week back</h2>
     </div>
-    <div class="grid-3">
+    <div class="grid-3 reveal-stagger">
       <div class="testi">
         <p class="quote">"I stopped dreading Monday inbox catch-up. Clearlane already had it handled."</p>
         <p class="who">— Clinic owner, med-spa</p>
@@ -184,7 +186,7 @@
 
 <section class="section-alt">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Common questions</span>
       <h2>Before you book a call</h2>
     </div>
@@ -251,6 +253,6 @@
   </div>
 </footer>
 
-<script src="main.js></script>
+<script src="js/main.js"></script>
 </body>
 </html>
